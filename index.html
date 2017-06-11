@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Neighbourhood Map</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <h3 align="center">Ambala Hotels</h3>
+        <ul id="slide-out" class="side-nav">
+            <li><input type="search" class="form-control" placeholder="Choose Hotels" data-bind="value: searchQuery, valueUpdate: 'keyup'"></li>
+            <ul class="nav navbar-nav" data-bind="foreach : list">
+                <a><li data-bind="text : $data , click : open" class="pink-text text-darken-2"></li></a>
+            </ul>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+        <div id="map"></div>
+    </div>
+    <footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+        <script src="js/knockout-3.2.0.js"></script>
+        <script src="js/app.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACJGVt_7o_I09XiwMuXzBnQ1DGFb_EWHk&callback=startMap" onerror="mapnotResponding()"></script>
+
+    </footer>
+</body>
+
+</html>
