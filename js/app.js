@@ -2,7 +2,7 @@ var ambala_map;
 var ambala_coor = {
     lat: 30.3782,
     lng: 76.7767
-}
+};
 
 // Initialize collapse button
   $(".button-collapse").sideNav();
@@ -35,7 +35,7 @@ var view = {
             }
         }
     }
-}
+};
 
 function mapnotResponding() {
     view.wasError(true);
